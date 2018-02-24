@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Update postman</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="background-color:#cfcfc4">
+    <center>
+
+        <table style="width:600px" bgcolor="#adad9a">
+            <tr>
+                <th style="height:50px"><b>Update postman</b></th>
+            </tr>
+              <tr>
+                <td style="height:50px" margin=><b>
+      
+                        <form method="POST"> 
+                            <label style="width: 200px; display: inline-block"><center>Postman ID</center></label>
+                            <input type="text" name="postmanID" value="" onchange="document.updateName.postmanID.value=this.value; document.updateSurname.postmanID.value=this.value;" >
+                            
+                        </form>
+                    </b></td>
+            </tr>
+            <tr>
+                <td style="height:50px" margin=><b>
+      
+                        <form name="updateName" action="UpdatePostmanResult" method="POST"> 
+                            <label style="width: 200px; display: inline-block"><center>Update name</center></label>
+                            <input name="postmanName" value="" >
+                            <input type="hidden" name="operationType" value="updateName" >
+                            <input type="hidden" name="postmanID" value="">
+                            <input type="submit" value="Update" style="margin-top: 10px" />
+                        </form>
+                    </b></td>
+            </tr>
+            <tr>
+                <td style="height:50px"><b>
+                        <form name="updateSurname" action="UpdatePostmanResult" method="POST"> 
+                            <label style="width: 200px; display: inline-block"><center>Update surname</center></label>
+                            <input name="postmanSurname" value="" >
+                            <input type="hidden" name="operationType" value="updateSurname" >
+                            <input type="hidden" name="postmanID" value="">
+                            <input type="submit" value="Update" style="margin-top: 10px" />
+                        </form>
+                    </b></td>
+            </tr>
+
+
+            <td style="height:50px"><b><center>
+                        <form action="BackServlet" method="POST"> 
+                            <input type="submit" value="Back to menu" />
+                        </form>
+                    </center></b></td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

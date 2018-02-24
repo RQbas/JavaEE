@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Read letter</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="background-color:#cfcfc4">
+    <center>
+
+        <table style="width:600px" bgcolor="#adad9a">
+            <tr>
+                <th style="height:50px"><b>Find letter</b></th>
+            </tr>
+           <tr>
+                <td style="height:50px" margin=><b>
+                        <form action="ReadResultLetter" method="POST"> 
+                            <label style="width: 250px; display: inline-block"><center>Find by letter ID</center></label>
+                            <input name="letterID" value="" >
+                            <input type="hidden" name="operationType" value="byID" >
+                            <input type="submit" value="Find" style="margin-top: 10px" />
+                        </form>
+                    </b></td>
+            </tr>
+             <tr>
+                <td style="height:50px"><b>
+                            <form action="ReadResultLetter" method="POST"> 
+                                <label style="width: 250px; display: inline-block"><center>Find all letters</center></label>
+                                <input type="hidden" name="operationType" value="byAll" >
+                                <input type="submit" value="Find" style="margin-top: 10px" />
+                            </form>
+                        </b></td>
+            </tr>
+             <tr>
+                <td style="height:50px"><b>
+                            <form action="ReadResultLetter" method="POST"> 
+                                <label style="width: 250px; display: inline-block"><center>Find by addressee address</center></label>
+                                <input name="addresseeAddress" value="" >
+                                <input type="hidden" name="operationType" value="byAddresseeAddress" >
+                                <input type="submit" value="Find" style="margin-top: 10px" />
+                            </form>
+                        </b></td>
+            </tr>
+            
+              <tr>
+                <td style="height:50px"><b><center>
+                            <form action="ReadResultLetter" method="POST"> 
+                                <label style="width: 250px; display: inline-block"><center>Find by sender address</center></label>
+                                <input name="senderAddress" value="" >
+                                <input type="hidden" name="operationType" value="bySenderAddress" >
+                                <input type="submit" value="Find" style="margin-top: 10px" />
+                            </form>
+                        </center></b></td>
+            </tr>
+                  <tr>
+                <td style="height:50px"><b>
+                            <form action="ReadResultLetter" method="POST"> 
+                                <label style="width: 250px; display: inline-block"><center>Find by postman ID</center></label>
+                                <input name="postmanID" value="" >
+                                <input type="hidden" name="operationType" value="byPostmanID" >
+                                <input type="submit" value="Find" style="margin-top: 10px" />
+                            </form>
+                       </b></td>
+            </tr>
+            
+            
+             <tr>
+                <td style="height:50px"><b><center>
+                            <form action="BackServlet" method="POST"> 
+                                <input type="submit" value="Back to menu" />
+                            </form>
+                        </center></b></td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>
+

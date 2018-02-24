@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Update letter</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="background-color:#cfcfc4">
+    <center>
+
+        <table style="width:700px" bgcolor="#adad9a">
+            <tr>
+                <th style="height:50px"><b>Update letter</b></th>
+            </tr>
+            <tr>
+                <td style="height:50px" margin=><b>
+
+                        <form method="POST"> 
+                            <label style="width: 250px; display: inline-block"><center>Letter ID</center></label>
+                            <input type="text" name="letterID" value="" accept=""
+                                onchange="document.updateContent.letterID.value = this.value;
+                                document.updateAddresseeAddress.letterID.value = this.value;
+                                document.updateAddresseeName.letterID.value = this.value;
+                                document.updateSenderAddress.letterID.value = this.value;
+                                document.updateSenderName.letterID.value = this.value;
+                                "   >
+
+                        </form>
+                    </b></td>
+            </tr>
+            <tr>
+                <td style="height:50px" margin=><b>
+
+                        <form name="updateContent" action="UpdateLetterResult" method="POST"> 
+                            <label style="width: 250px; display: inline-block"><center>Update letter content</center></label>
+                            <input name="letterContent" value="" >
+                            <input type="hidden" name="operationType" value="updateContent" >
+                            <input type="hidden" name="letterID" value="">
+                            <input type="submit" value="Update" style="margin-top: 10px" />
+                        </form>
+                    </b></td>
+            </tr>
+
+            <tr>
+                <td style="height:50px" margin=><b>
+
+                        <form name="updateAddresseeAddress" action="UpdateLetterResult" method="POST"> 
+                            <label style="width: 250px; display: inline-block"><center>Update addressee address</center></label>
+                            <input name="addresseeAddress" value="" >
+                            <input type="hidden" name="operationType" value="updateAddresseeAddress" >
+                            <input type="hidden" name="letterID" value="">
+                            <input type="submit" value="Update" style="margin-top: 10px" />
+                        </form>
+                    </b></td>
+            </tr>
+            <tr>
+                <td style="height:50px" margin=><b>
+
+                        <form name="updateAddresseeName" action="UpdateLetterResult" method="POST"> 
+                            <label style="width: 250px; display: inline-block"><center>Update addressee name</center></label>
+                            <input name="addresseeName" value="" >
+                            <input type="hidden" name="operationType" value="updateAddresseeName" >
+                            <input type="hidden" name="letterID" value="">
+                            <input type="submit" value="Update" style="margin-top: 10px" />
+                        </form>
+                    </b></td>
+            </tr>
+
+            
+            <tr>
+                <td style="height:50px" margin=><b>
+
+                        <form name="updateSenderAddress" action="UpdateLetterResult" method="POST"> 
+                            <label style="width: 250px; display: inline-block"><center>Update sender address</center></label>
+                            <input name="senderAddress" value="" >
+                            <input type="hidden" name="operationType" value="updateSenderAddress" >
+                            <input type="hidden" name="letterID" value="">
+                            <input type="submit" value="Update" style="margin-top: 10px" />
+                        </form>
+                    </b></td>
+            </tr>
+            <tr>
+                <td style="height:50px" margin=><b>
+
+                        <form name="updateSenderName" action="UpdateLetterResult" method="POST"> 
+                            <label style="width: 250px; display: inline-block"><center>Update sender name</center></label>
+                            <input name="senderName" value="" >
+                            <input type="hidden" name="operationType" value="updateSenderName" >
+                            <input type="hidden" name="letterID" value="">
+                            <input type="submit" value="Update" style="margin-top: 10px" />
+                        </form>
+                    </b></td>
+            </tr>
+
+            <td style="height:50px"><b><center>
+                        <form action="BackServlet" method="POST"> 
+                            <input type="submit" value="Back to menu" />
+                        </form>
+                    </center></b></td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>
+

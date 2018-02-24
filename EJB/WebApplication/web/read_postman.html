@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Read postman</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="background-color:#cfcfc4">
+    <center>
+
+        <table style="width:600px" bgcolor="#adad9a">
+            <tr>
+                <th style="height:50px"><b>Find postman</b></th>
+            </tr>
+            <tr>
+                <td style="height:50px" margin=><b>
+                        <form action="ReadResultPostman" method="POST"> 
+                            <label style="width: 250px; display: inline-block"><center>Find by postman ID</center></label>
+                            <input name="postmanID" value="" >
+                            <input type="hidden" name="operationType" value="byID" >
+                            <input type="submit" value="Find" style="margin-top: 10px" />
+                        </form>
+                    </b></td>
+            </tr>
+            <tr>
+                <td style="height:50px"><b>
+                        <form action="ReadResultPostman" method="POST"> 
+                            <label style="width: 250px; display: inline-block"><center>Find all postmans</center></label>
+                            <input type="hidden" name="operationType" value="byAll" >
+                            <input type="submit" value="Find" style="margin-top: 10px" />
+                        </form>
+                    </b></td>
+            </tr>
+            <tr>
+                <td style="height:50px"><b>
+                        <form action="ReadResultPostman" method="POST"> 
+                            <label style="width: 250px; display: inline-block"><center>Find by postman name</center></label>
+                            <input name="postmanName" value="" >
+                            <input type="hidden" name="operationType" value="byPostmanName" >
+                            <input type="submit" value="Find" style="margin-top: 10px" />
+                        </form>
+                    </b></td>
+            </tr>
+
+            <tr>
+                <td style="height:50px"><b><center>
+                            <form action="ReadResultPostman" method="POST"> 
+                                <label style="width: 250px; display: inline-block"><center>Find by postman surname</center></label>
+                                <input name="postmanSurname" value="" >
+                                <input type="hidden" name="operationType" value="byPostmanSurname" >
+                                <input type="submit" value="Find" style="margin-top: 10px" />
+                            </form>
+                        </center></b></td>
+
+
+            <tr>
+                <td style="height:50px"><b><center>
+                            <form action="BackServlet" method="POST"> 
+                                <input type="submit" value="Back to menu" />
+                            </form>
+                        </center></b></td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>
