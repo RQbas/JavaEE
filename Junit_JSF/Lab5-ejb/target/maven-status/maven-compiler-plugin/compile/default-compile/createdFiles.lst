@@ -1,0 +1,16 @@
+pl/kubas/rafal/model/Postman_.class
+pl/kubas/rafal/operations/UpdateLetterOperation.class
+pl/kubas/rafal/model/Postman.class
+pl/kubas/rafal/model/Letter.class
+pl/kubas/rafal/operations/DeleteEntityOperation.class
+pl/kubas/rafal/operations/UpdateLetterOperationLocal.class
+pl/kubas/rafal/model/Letter_.class
+pl/kubas/rafal/operations/ReadPostmanOperationLocal.class
+pl/kubas/rafal/operations/UpdatePostmanOperation.class
+pl/kubas/rafal/operations/UpdatePostmanOperationLocal.class
+pl/kubas/rafal/operations/CreateEntityOperation.class
+pl/kubas/rafal/operations/ReadLetterOperation.class
+pl/kubas/rafal/operations/CreateEntityOperationLocal.class
+pl/kubas/rafal/operations/ReadLetterOperationLocal.class
+pl/kubas/rafal/operations/DeleteEntityOperationLocal.class
+pl/kubas/rafal/operations/ReadPostmanOperation.class

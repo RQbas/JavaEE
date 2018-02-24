@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:h="http://java.sun.com/jsf/html"  
+      xmlns:f="http://java.sun.com/jsf/core"  
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Update letter</title>
+    </h:head>
+    <h:body>
+        <div align="center">
+
+
+            <h:form id="letterUpdateContent" prependId="false">
+                <p:panelGrid columns="3">
+                    <p:outputLabel for="letterID1" value="ID of letter to be updated"/>
+                    <p:inputText id="letterID1" required="true" value="#{letterController.letterID}">
+                        <p:ajax event="blur" update="letterID1"/>
+                        <f:validateLongRange minimum="0"/>
+                    </p:inputText>
+                    <p:message for="letterID1" display="error_txt" />
+
+
+                    <p:outputLabel for="letterContent" value="Letter content"/>
+                    <p:inputText id="letterContent" required="true" value="#{letterController.letterContent}">
+                    </p:inputText>
+                    <p:message for="letterContent" display="error_txt" />
+                    <f:facet name="footer" >
+                        <div align="center">
+                            <p:commandButton value="Update" update="@form"
+                                             actionListener="#{letterController.updateContent()}"></p:commandButton>
+                        </div>
+                    </f:facet>
+
+                </p:panelGrid>
+                <h1><p:outputLabel id = "outputMessage1"
+                                   value = "#{letterController.resultMessage}"/></h1>
+            </h:form>
+
+
+
+
+
+            <h:form id="letterUpdateAddresseeAddress" prependId="false">
+                <p:panelGrid columns="3">
+                    <p:outputLabel for="letterID2" value="ID of letter to be updated"/>
+                    <p:inputText id="letterID2" required="true" value="#{letterController.letterID}">
+                        <p:ajax event="blur" update="letterID2"/>
+                        <f:validateLongRange minimum="0"/>
+                    </p:inputText>
+                    <p:message for="letterID2" display="error_txt" />
+
+
+                    <p:outputLabel for="addresseeAddress" value="Addressee address"/>
+                    <p:inputText id="addresseeAddress" required="true" value="#{letterController.addresseeAddress}">
+                    </p:inputText>
+                    <p:message for="addresseeAddress" display="error_txt" />
+                    <f:facet name="footer" >
+                        <div align="center">
+                            <p:commandButton value="Update" update="@form"
+                                             actionListener="#{letterController.updateAddresseeAddress()}"></p:commandButton>
+                        </div>
+                    </f:facet>
+
+                </p:panelGrid>
+                <h1><p:outputLabel id = "outputMessage2"
+                                   value = "#{letterController.resultMessage}"/></h1>
+            </h:form>
+
+            <h:form id="letterUpdateSenderAddress" prependId="false">
+                <p:panelGrid columns="3">
+                    <p:outputLabel for="letterID3" value="ID of letter to be updated"/>
+                    <p:inputText id="letterID3" required="true" value="#{letterController.letterID}">
+                        <p:ajax event="blur" update="letterID3"/>
+                        <f:validateLongRange minimum="0"/>
+                    </p:inputText>
+                    <p:message for="letterID3" display="error_txt" />
+
+
+                    <p:outputLabel for="senderAddress" value="Sender address"/>
+                    <p:inputText id="senderAddress" required="true" value="#{letterController.senderAddress}">
+                    </p:inputText>
+                    <p:message for="senderAddress" display="error_txt" />
+                    <f:facet name="footer" >
+                        <div align="center">
+                            <p:commandButton value="Update" update="@form"
+                                             actionListener="#{letterController.updateSenderAddress()}"></p:commandButton>
+                        </div>
+                    </f:facet>
+
+                </p:panelGrid>
+                <h1><p:outputLabel id = "outputMessage3"
+                                   value = "#{letterController.resultMessage}"/></h1>
+            </h:form>
+
+            <h:form id="letterUpdateAddresseeName" prependId="false">
+                <p:panelGrid columns="3">
+                    <p:outputLabel for="letterID4" value="ID of letter to be updated"/>
+                    <p:inputText id="letterID4" required="true" value="#{letterController.letterID}">
+                        <p:ajax event="blur" update="letterID4"/>
+                        <f:validateLongRange minimum="0"/>
+                    </p:inputText>
+                    <p:message for="letterID4" display="error_txt" />
+
+
+                    <p:outputLabel for="addresseeName" value="Addressee name"/>
+                    <p:inputText id="addresseeName" required="true" value="#{letterController.addresseeName}">
+                    </p:inputText>
+                    <p:message for="addresseeName" display="error_txt" />
+                    <f:facet name="footer" >
+                        <div align="center">
+                            <p:commandButton value="Update" update="@form"
+                                             actionListener="#{letterController.updateAddresseeName()}"></p:commandButton>
+                        </div>
+                    </f:facet>
+
+                </p:panelGrid>
+                <h1><p:outputLabel id = "outputMessage4"
+                                   value = "#{letterController.resultMessage}"/></h1>
+            </h:form>
+
+            <h:form id="letterUpdateSenderName" prependId="false">
+                <p:panelGrid columns="3">
+                    <p:outputLabel for="letterID5" value="ID of letter to be updated"/>
+                    <p:inputText id="letterID5" required="true" value="#{letterController.letterID}">
+                        <p:ajax event="blur" update="letterID5"/>
+                        <f:validateLongRange minimum="0"/>
+                    </p:inputText>
+                    <p:message for="letterID5" display="error_txt" />
+
+
+                    <p:outputLabel for="senderName" value="Sender name"/>
+                    <p:inputText id="senderName" required="true" value="#{letterController.senderName}">
+                    </p:inputText>
+                    <p:message for="senderName" display="error_txt" />
+                    <f:facet name="footer" >
+                        <div align="center">
+                            <p:commandButton value="Update" update="@form"
+                                             actionListener="#{letterController.updateSenderName()}"></p:commandButton>
+                        </div>
+                    </f:facet>
+
+                </p:panelGrid>
+                <h1><p:outputLabel id = "outputMessage5"
+                                   value = "#{letterController.resultMessage}"/></h1>
+            </h:form>
+
+        </div>
+    </h:body>
+</html>
+

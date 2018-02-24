@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:h="http://java.sun.com/jsf/html"  
+      xmlns:f="http://java.sun.com/jsf/core"  
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Create postman</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <div align="center">
+            <h:form id="letterCreate" prependId="false">
+                <p:panelGrid columns="3">
+
+                    <p:outputLabel for="letterContent" value="Letter content"/>
+                    <p:inputText id="letterContent" required="true" value="#{letterController.letterContent}">          
+                    </p:inputText>
+                    <p:message for="letterContent" display="error_txt" />
+
+                    <p:outputLabel for="addresseeAddress" value="Addressee address"/>
+                    <p:inputText id="addresseeAddress" required="true" value="#{letterController.addresseeAddress}">     
+                    </p:inputText>
+                    <p:message for="addresseeAddress" display="error_txt" />
+
+                    <p:outputLabel for="addresseeName" value="Addressee name"/>
+                    <p:inputText id="addresseeName" required="true" value="#{letterController.addresseeName}">     
+                        <f:validateRegex pattern="[a-zA-Z]+"/>
+                    </p:inputText>
+                    <p:message for="addresseeName" display="error_txt" />
+
+                    <p:outputLabel for="senderAddress" value="Sender address"/>
+                    <p:inputText id="senderAddress" required="true" value="#{letterController.senderAddress}">     
+                    </p:inputText>
+                    <p:message for="senderAddress" display="error_txt" />
+
+                    <p:outputLabel for="senderName" value="Sender name"/>
+                    <p:inputText id="senderName" required="true" value="#{letterController.senderName}">     
+                        <f:validateRegex pattern="[a-zA-Z]+"/>
+                    </p:inputText>
+                    <p:message for="senderName" display="error_txt" />
+
+                    <p:outputLabel for="postmanID" value="Postman ID"/>
+                    <p:inputText id="postmanID" required="true" value="#{letterController.postmanID}">  
+                        <p:ajax event="blur" update="postmanID"/>
+                        <f:validateLongRange minimum="0"/>
+                    </p:inputText>
+                    <p:message for="postmanID" display="error_txt" />
+
+
+                    <f:facet name="footer" >
+                        <div align="center">
+                            <p:commandButton value="Create" update="@form"
+                                             actionListener="#{letterController.createLetter()}"></p:commandButton>
+                        </div>
+                    </f:facet>
+
+                </p:panelGrid>
+                <h1><p:outputLabel id = "outputMessage"
+                                   value = "#{letterController.resultMessage}"/></h1>
+            </h:form>
+        </div>
+    </h:body>
+</html>

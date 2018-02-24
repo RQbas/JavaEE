@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml"
+      xmlns:f = "http://java.sun.com/jsf/core"
+      xmlns:h = "http://java.sun.com/jsf/html">
+    <head>
+        <style>
+            h1 {text-align:center;}
+            p {text-align:center;}
+        </style>
+        <title>Post Manager</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h1>Welcome to the post manager</h1>
+        <h:form id="menu_form">      
+            <h1>
+                <table align="center" id="table_buttons"> 
+                    <tbody>
+                        <tr>
+                            <th id="t1">Postman</th>
+                            <th id="t2">Letters</th>
+                        </tr>
+                        <tr>
+                            <td headers="t1">                
+                                <h:commandButton style="width:225px;height:50px" action = "#{navigationController.navigateToCreatePostman}"
+                                                  value = "Create postman" />
+                            </td>
+                            <td headers="t2">
+                                <h:commandButton style="width:225px;height:50px" action = "#{navigationController.navigateToCreateLetter}"
+                                                  value = "Create letter" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td headers="t1">                
+                                <h:commandButton style="width:225px;height:50px" action = "#{navigationController.navigateToReadPostman}"
+                                                  value = "Find postman" />
+                            </td>
+                            <td headers="t2">
+                                <h:commandButton style="width:225px;height:50px" action = "#{navigationController.navigateToReadLetter}"
+                                                  value = "Find letter" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td headers="t1">                
+                                <h:commandButton style="width:225px;height:50px" action = "#{navigationController.navigateToUpdatePostman}"
+                                                  value = "Update postman" />
+                            </td>
+                            <td headers="t2">
+                                <h:commandButton style="width:225px;height:50px" action = "#{navigationController.navigateToUpdateLetter}"
+                                                  value = "Update letter" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td headers="t1">                
+                                <h:commandButton  style="width:225px;height:50px"  action = "#{navigationController.navigateToDeletePostman}"
+                                                  value = "Delete postman" />
+                            </td>
+                            <td headers="t2">
+                                <h:commandButton style="width:225px;height:50px" action = "#{navigationController.navigateToDeleteLetter}"
+                                                  value = "Delete letter" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table></h1>
+
+        </h:form>
+    </body>
+</html>

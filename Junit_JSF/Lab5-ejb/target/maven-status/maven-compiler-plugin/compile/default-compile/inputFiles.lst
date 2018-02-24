@@ -1,0 +1,14 @@
+/home/rkubas/Pulpit/Lab5/Lab5-ejb/src/main/java/pl/kubas/rafal/operations/UpdatePostmanOperation.java
+/home/rkubas/Pulpit/Lab5/Lab5-ejb/src/main/java/pl/kubas/rafal/operations/UpdateLetterOperationLocal.java
+/home/rkubas/Pulpit/Lab5/Lab5-ejb/src/main/java/pl/kubas/rafal/model/Postman.java
+/home/rkubas/Pulpit/Lab5/Lab5-ejb/src/main/java/pl/kubas/rafal/operations/UpdatePostmanOperationLocal.java
+/home/rkubas/Pulpit/Lab5/Lab5-ejb/src/main/java/pl/kubas/rafal/operations/DeleteEntityOperationLocal.java
+/home/rkubas/Pulpit/Lab5/Lab5-ejb/src/main/java/pl/kubas/rafal/operations/ReadPostmanOperation.java
+/home/rkubas/Pulpit/Lab5/Lab5-ejb/src/main/java/pl/kubas/rafal/operations/ReadPostmanOperationLocal.java
+/home/rkubas/Pulpit/Lab5/Lab5-ejb/src/main/java/pl/kubas/rafal/operations/DeleteEntityOperation.java
+/home/rkubas/Pulpit/Lab5/Lab5-ejb/src/main/java/pl/kubas/rafal/operations/UpdateLetterOperation.java
+/home/rkubas/Pulpit/Lab5/Lab5-ejb/src/main/java/pl/kubas/rafal/model/Letter.java
+/home/rkubas/Pulpit/Lab5/Lab5-ejb/src/main/java/pl/kubas/rafal/operations/CreateEntityOperation.java
+/home/rkubas/Pulpit/Lab5/Lab5-ejb/src/main/java/pl/kubas/rafal/operations/CreateEntityOperationLocal.java
+/home/rkubas/Pulpit/Lab5/Lab5-ejb/src/main/java/pl/kubas/rafal/operations/ReadLetterOperationLocal.java
+/home/rkubas/Pulpit/Lab5/Lab5-ejb/src/main/java/pl/kubas/rafal/operations/ReadLetterOperation.java

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:h="http://java.sun.com/jsf/html"  
+      xmlns:f="http://java.sun.com/jsf/core"  
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Find letters</title>
+    </h:head>
+    <h:body>
+        <div align="center">
+
+            <h:form id="postmanReadByAddresseeAddress" prependId="false">
+                <p:panelGrid columns="3">
+                    <p:outputLabel for="addresseeAddress" value="Addressee address"/>
+                    <p:inputText id="addresseeAddress" required="true" value="#{letterController.addresseeAddress}">  
+
+                    </p:inputText>
+                    <p:message for="addresseeAddress" display="error_txt" />
+
+                    <f:facet name="footer" >
+                        <div align="center">
+                            <p:commandButton value="Find" update=":letters_form:data @form"
+                                             actionListener="#{letterController.readByAddresseeAddress()}"></p:commandButton>
+                        </div>
+                    </f:facet>
+                </p:panelGrid>
+                <h1><p:outputLabel id = "outputMessage1"
+                                   value = "#{postmanController.resultMessage}"/></h1>
+            </h:form>
+
+            <h:form id="postmanReadBySenderAddress" prependId="false">
+                <p:panelGrid columns="3">
+                    <p:outputLabel for="senderAddress" value="Postman surname"/>
+                    <p:inputText id="senderAddress" required="true" value="#{letterController.senderAddress}">  
+                    </p:inputText>
+                    <p:message for="senderAddress" display="error_txt" />
+
+                    <f:facet name="footer" >
+                        <div align="center">
+                            <p:commandButton value="Find" update=":letters_form:data @form"
+                                             actionListener="#{letterController.readBySenderAddress()}"></p:commandButton>
+                        </div>
+                    </f:facet>
+                </p:panelGrid>
+                <h1><p:outputLabel id = "outputMessage2"
+                                   value = "#{postmanController.resultMessage}"/></h1>
+            </h:form>
+
+
+
+            <h:form id="postmanReadByPostmanID" prependId="false">
+                <p:panelGrid columns="3">
+                    <p:outputLabel for="postmanID" value="Postman's ID"/>
+                    <p:inputText id="postmanID" required="true" value="#{letterController.postmanID}">  
+                        <p:ajax event="blur" update="postmanID"/>
+                        <f:validateLongRange minimum="0"/>
+                    </p:inputText>
+                    <p:message for="postmanID" display="error_txt" />
+
+                    <f:facet name="footer" >
+                        <div align="center">
+                            <p:commandButton value="Find" update=":letters_form:data @form"
+                                             actionListener="#{letterController.readByPostmanID()}"></p:commandButton>
+                        </div>
+                    </f:facet>
+                </p:panelGrid>
+                <h1><p:outputLabel id = "outputMessage3"
+                                   value = "#{postmanController.resultMessage}"/></h1>
+            </h:form>
+
+            <h:form id="letterReadByID" prependId="false">
+                <p:panelGrid columns="3">
+                    <p:outputLabel for="letterID" value="Letter ID"/>
+                    <p:inputText id="letterID" required="true" value="#{letterController.letterID}">  
+                        <p:ajax event="blur" update="letterID"/>
+                        <f:validateLongRange minimum="0"/>
+                    </p:inputText>
+                    <p:message for="letterID" display="error_txt" />
+
+                    <f:facet name="footer" >
+                        <div align="center">
+                            <p:commandButton value="Find" update=":letters_form:data @form"
+                                             actionListener="#{letterController.readByID()}"></p:commandButton>
+                        </div>
+                    </f:facet>
+                </p:panelGrid>
+                <h1><p:outputLabel id = "outputMessage4"
+                                   value = "#{letterController.resultMessage}"/></h1>
+            </h:form>
+
+
+            <h:form id="letterReadAll" prependId="false">
+                <p:panelGrid columns="3">
+                    <f:facet name="footer" >
+                        <div align="center">
+                            <p:commandButton value="Find all"
+                                             update=":letters_form:data @form" actionListener="#{letterController.readAll()}"></p:commandButton>
+                        </div>
+                    </f:facet>
+                </p:panelGrid>
+                <h1><p:outputLabel id = "outputMessage5"
+                                   value = "#{letterController.resultMessage}"/></h1>
+            </h:form>
+
+            <h:form id="letters_form" prependId="false">
+                <p:dataTable id="data" style="center" rowIndexVar="idx" rows="20" emptyMessage="No data" value="#{letterController.letters}" var="letter">
+
+                    <p:column headerText="ID">
+                        <h:outputText value="#{letter.id}"/>
+                    </p:column>
+                    <p:column headerText="Letter content">
+                        <h:outputText value="#{letter.letterContent}"/>
+                    </p:column>
+                    <p:column headerText="Addressee name">
+                        <h:outputText value="#{letter.addresseeName}"/>
+                    </p:column>
+                    <p:column headerText="Addressee adress">
+                        <h:outputText value="#{letter.addresseeAddress}"/>
+                    </p:column>
+                    <p:column headerText="Sender name">
+                        <h:outputText value="#{letter.senderName}"/>
+                    </p:column>
+                    <p:column headerText="Sender adress">
+                        <h:outputText value="#{letter.senderAddress}"/>
+                    </p:column>
+                    <p:column headerText="Carrying postman's ID">
+                        <h:outputText value="#{letter.postman.id}"/>
+                    </p:column>
+
+                </p:dataTable>
+
+            </h:form>
+
+
+
+        </div>
+    </h:body>
+</html>
